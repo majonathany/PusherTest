@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['sendMessage'] = 'pusher_server/sendMessage';
 $route['generateTestEvent'] = 'pusher_server/generateTestEvent';
 $route['fetchStaffId'] = 'pusher_server/fetchStaffId';
+$route['fetchProjTempVerId'] = 'pusher_server/fetchProjTempVerId';

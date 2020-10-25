@@ -25,6 +25,16 @@ class Locked_connections_model extends CI_Model
         return ['staffid' => $query->result()[0]->staffid];
     }
 
+    public function fetchProjTempVerId()
+    {
+        $this->db->from(db_prefix() . "project_template_versions");
+        $this->db->select('*');
+        $this->db->limit(1);
+        $query = $this->db->get();
+        return ['id' => $query->result()[0]];
+
+    }
+
     public function testDB()
     {
         $this->db->trans_start();

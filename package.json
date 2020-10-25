@@ -1,0 +1,55 @@
+{
+  "name": "pusher_test",
+  "version": "1.0.0",
+  "description": "Features List:   Pusher Client-Server Communication for Editing Project Template Versions: 1.\tClient Side         1.\tInit Pusher Client         2.\tSend are alive messages every 5 mins         3.\tStore session token in session storage 2.\tServer Side         1.\tInit Pusher Server         2.\tEstablish connection via Pusher Channel 3.\tDatabase         1.\tCRUD to tblconnections         2.\tDiscuss session token 5. **(S -> C) Events that are passed (in JSON)**     - Prologue - Is listening for client connections.     1.  GetStatusOfProjectVersionTemplate         1. id (PK of tblconnections)         2. receipt_number: int (randomly generated, conversation number)         3. **OKToEdit**: Boolean         4. project_version_id,          5. project_version_name,          6. project_template_id (need join to the template tbl),          7. project_template_name (need join to the template tbl),         8. current_staff_editing_id,         9. current_staff_editing_name,         10. last_updated_time,     2.  5. **(C -> S) Events that are passed (in JSON)**     1. decisionEvent          1. **reciept_number:** int (same as initial server receipt no.)         2. **client_timestamp** *timestamp* (last update timestamp)          3. **SeqNumber**          3. **action:** *payload* (collection of keys, values)             1. startConnection             2. connectionIsAlive                 1. **sessionToken:** *uuidv4 string* (if stored in SessionStorage) - unique uuidv4                     per browser tab.              3. requestUseOfProjectVersionTemplate                 1. **connectionId:** *int NON-NULL* (Primary Key of tblconnections)                  2. **sessionToken:** *uuidv4 string NON-NULL* (stored in SessionStorage or newly generated) - unique uuidv4                     per browser tab.                 2. **project_version_id:** *int NON-NULL* (last updated timestamp)              3. WouldLikeToKickOutUser                 1. **connectionId:** *int NON-NULL* (Primary Key of tblconnections)                  2. **sessionToken:** *uuidv4 string NON-NULL* (stored in SessionStorage or newly generated) - unique uuidv4                     per browser tab.                 2. **project_version_id:** *int NON-NULL* (last updated timestamp)              4. responseToRequestToBeKickedOut                 1. **kickMeOut:** *boolean* (client's response to the question, another user asks to kick you out)             5. endConnection",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:update": "jest --verbose --coverage --updateSnapshot",
+    "test:watch": "jest --verbose --watch",
+    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html",
+    "produce": "watchify --verbose -d js/pusher_client/main.js -o public/dist/bundle.js -t [ babelify --presets [ @babel/preset-env] ] "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majonathany/PusherTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majonathany/PusherTest/issues"
+  },
+  "homepage": "https://github.com/majonathany/PusherTest#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "base64-js": "^1.3.1",
+    "core-js": "^3.6.5",
+    "pusher-js": "^7.0.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@jest/globals": "^26.6.1",
+    "babel-jest": "^26.6.1",
+    "babelify": "^10.0.0",
+    "jest": "^26.6.1",
+    "watchify": "^3.11.1"
+  },
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "targets": {
+          "firefox": "64"
+        }
+      }
+    ]
+  ]
+}

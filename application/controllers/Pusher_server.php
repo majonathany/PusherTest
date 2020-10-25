@@ -34,12 +34,12 @@ class Pusher_Server extends CI_Controller {
             ->set_output(json_encode($results));
     }
 
-    public function produceJSON400Response()
+    public function produceJSON400Response($error)
     {
         return $this->output
             ->set_content_type('application/json')
             ->set_status_header(400)
-            ->set_output('Failure');
+            ->set_output($error ? json_encode($error) : "Failure");
     }
 
     //Can only accept either JSON array or null, and
@@ -54,20 +54,29 @@ class Pusher_Server extends CI_Controller {
     public function generateTestEvent()
     {
         $data['message'] = rand(1, 1000);
-        $this->app_pusher->trigger('my-channel', 'my-event', $data);
+        $response = $this->app_pusher->trigger('my-channel', 'my-event', $data);
+        return $response ? $this->produceJSON200Response(["success" => true]) :
+            $this->produceJSON400Response(["success" => false]);
     }
 
 
     /**
      * Fetch Staff ID based on current session. Should only be called if user is logged in, otherwise return 400.
      *
-     * @return JSON: {staff_id: n}
+     * @return \PHPUnit\Util\Json with form: {staff_id: n}
      */
 
     public function fetchStaffId()
     {
         return $this->produceJSONFromArray(
             $this->locked_connections_model->fetchStaffId());
+    }
+
+    public function fetchProjTempVerId()
+    {
+        return $this->produceJSONFromArray(
+            $this->locked_connections_model->fetchProjTempVerId());
+
     }
 
 	public function index()
