@@ -1,12 +1,17 @@
-import {fetchJSONOrGetNull} from "./helpers";
+import {fetchJSONOrGetNull, getSessionStorageKeyName} from "./helpers";
 import {sagaMiddleware, store} from "./reducers";
 import {initPusherClient} from "./sagas";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
+import BSN from "bootstrap.native";
+
+
 //Initialize DOM
 function addListeners()
 {
+
+
 	document.querySelector('#initializePusher').addEventListener('click', function(){
 		sagaMiddleware.run(initPusherClient)
 	})
@@ -53,9 +58,22 @@ function render() {
 	currentSession?.eventLog.map(line => {
 		document.querySelector('#output').innerHTML += `<li>${line}</li>`
 	})
+
+	if (currentSession.sessionStorageToken !== -1)
+	{
+		document.querySelector("#sessionToken").textContent = currentSession.sessionStorageToken;
+		sessionStorage.setItem(getSessionStorageKeyName(currentSession.projTempVerId), currentSession.sessionStorageToken);
+	}
+
 }
 
+function sPromptsCToQuitListener()
+{
+	const currentState = store.getState().pusherClientRootReducer;
+
+}
 
 // Initialize Application
 addListeners();
 store.subscribe(render);
+store.subscribe(sPromptsCToQuitListener);

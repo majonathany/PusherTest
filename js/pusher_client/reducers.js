@@ -1,4 +1,4 @@
-import {uuidv4} from "./helpers";
+import {getSessionStorageKeyName, uuidv4} from "./helpers";
 import {action_types} from './actions';
 import {applyMiddleware, combineReducers, createStore} from 'redux'
 import createSagaMiddleware from 'redux-saga'
@@ -54,16 +54,16 @@ const fetchProjTempVerIdReducer = (state, action) => {
 
 const loadSessionTokenReducer = (state, action) => {
     return sessionReducerHelper(state, action, (currentSession) => {
-        debugger;
+
 
         if (currentSession.projTempVerId === -1) {
             console.debug('Cannot set session token when projTempVerId is null')
         }
         else {
-            const sessionStorageKey = `projTempVer-${currentSession.projTempVerId}-SessionToken`;
-            currentSession.sessionStorageToken = sessionStorage.getItem(sessionStorageKey) || uuidv4();
+            const sessionStorageKeyName = getSessionStorageKeyName(currentSession.projTempVerId);
+            currentSession.sessionStorageToken = sessionStorage.getItem(sessionStorageKeyName) || uuidv4();
         }
-        debugger;
+
         return currentSession;
     })
 }

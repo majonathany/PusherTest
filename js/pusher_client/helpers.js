@@ -1,5 +1,3 @@
-
-
 export function fetchJSONOrGetNull(url, options = {}, isJson = true) {
     return fetch(url,
         {
@@ -50,5 +48,9 @@ export function camelifyScreaming(input)
             .replace( /_(.)/g, function($1) { return $1.toUpperCase(); })
             .replace( / /g, '' )
             .replace( /[_]/g, '' );
+}
 
+export function getSessionStorageKeyName(projectTemplateVersionId)
+{
+    return `projTempVer-${projectTemplateVersionId}-SessionToken`
 }

@@ -48,7 +48,7 @@ class Pusher_Server extends CI_Controller {
     {
         return $results != null ?
             $this->produceJSON200Response($results) :
-            $this->produceJSON400Response();
+            $this->produceJSON400Response('');
     }
 
     public function generateTestEvent()
@@ -83,4 +83,9 @@ class Pusher_Server extends CI_Controller {
 	{
 		$this->load->view('pusher_example');
 	}
+
+	public function auth()
+    {
+
+    }
 }

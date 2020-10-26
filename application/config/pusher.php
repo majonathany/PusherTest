@@ -21,6 +21,9 @@ $config['pusher_debug']      = TRUE;
 $config['cluster']      = 'us2';
 $config['useTLS']      = true;
 
+// If you want encrypted channels, this must be set.
+$config['encryption_master_key']      =  '12345';
+
 /*
 |--------------------------------------------------------------------------
 | Other parameters
