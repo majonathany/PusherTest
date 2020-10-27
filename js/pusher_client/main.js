@@ -10,8 +10,6 @@ import BSN from "bootstrap.native";
 //Initialize DOM
 function addListeners()
 {
-
-
 	document.querySelector('#initializePusher').addEventListener('click', function(){
 		sagaMiddleware.run(initPusherClient)
 	})
@@ -31,6 +29,30 @@ function addListeners()
 			console.debug("Did not successfully communicate with database")
 		})
 	})
+
+	document.querySelectorAll('#channelDropdown a').forEach(function(selector) {
+		selector.addEventListener('click', function(event){
+			document.querySelector('#dropdownMenuButton').textContent = event.currentTarget.textContent;
+
+			// Public - 1, Private - 2, Presence - 3, Encrypted - 4
+			document.querySelector('#dropdownMenuButton').dataset.value = event.currentTarget.dataset.value;
+		})
+	})
+
+	document.querySelector('#makeNewChannel').addEventListener('click', function() {
+		const channelName = document.querySelector('#createChannelName').value;
+		console.log(channelName);
+
+
+	})
+
+	document.querySelector('#connectToChannel').addEventListener('click', function() {
+		const channelName = document.querySelector('#connectToChannelName').value;
+		console.log(channelName);
+
+
+	})
+
 }
 
 //Effects of Actions, These Functions are Called when Store is updated

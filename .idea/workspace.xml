@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f09b95c-1d69-43f5-9b90-587b48464eb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/placeholder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/simple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pusher_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pusher_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/pusher.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/pusher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Pusher_server.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pusher_server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pusher_example.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pusher_example.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pusher_client/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pusher_client/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pusher_client/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pusher_client/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pusher_client/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pusher_client/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pusher_client/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pusher_client/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pusher_client/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,12 @@
           <mapping local-root="$PROJECT_DIR$/public" remote-root="/Users/professional/Desktop/work/ornsoft/neocee" />
         </path_mappings>
       </server>
+      <server host="ceertif.local" id="a8ebc3ea-1a8b-40bd-94cf-79219b3e100b" name="ceertif.local" port="7000" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="/Users/professional/Desktop/work/ornsoft/ceertif/public" />
+        </path_mappings>
+      </server>
+      <server host="pushertest.local" id="3c6b78b4-f361-418f-ba11-b468e066592f" name="pushertest.local" port="7000" />
     </servers>
   </component>
   <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$/public" selected_validation_type="LOCAL" web_path_to_validation_script="http://pushertest:7000" />
@@ -94,6 +101,16 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/delight-im/cookie" />
+      <path value="$PROJECT_DIR$/vendor/delight-im/db" />
+      <path value="$PROJECT_DIR$/vendor/delight-im/http" />
+      <path value="$PROJECT_DIR$/vendor/delight-im/base64" />
+      <path value="$PROJECT_DIR$/vendor/delight-im/auth" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j9FGp3LDsiWpctpVXmJdlahdLo" />
@@ -107,7 +124,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -170,7 +187,10 @@
       <workItem from="1603460121826" duration="5751000" />
       <workItem from="1603595747392" duration="36310000" />
       <workItem from="1603718719879" duration="1477000" />
-      <workItem from="1603731460131" duration="3127000" />
+      <workItem from="1603731460131" duration="3232000" />
+      <workItem from="1603769144748" duration="2081000" />
+      <workItem from="1603818844346" duration="7000" />
+      <workItem from="1603818854565" duration="5665000" />
     </task>
     <servers />
   </component>
@@ -363,10 +383,11 @@
       <screen x="1440" y="-380" width="1600" height="1000" />
     </state>
     <state x="2009" y="-32" key="PhpMappingAdvancedResolveDialog/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603300788355" />
-    <state x="278" y="125" width="997" height="722" key="SettingsEditor" timestamp="1603675544212">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="247" y="78" width="900" height="722" key="SettingsEditor" timestamp="1603770579194">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="278" y="125" width="997" height="722" key="SettingsEditor/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603675544212" />
+    <state x="247" y="78" width="900" height="722" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1603770579194" />
     <state x="1749" y="-241" key="SettingsEditor/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603287582588" />
     <state x="388" y="90" key="StringManipulation.SortTypeDialog" timestamp="1603675633961">
       <screen x="0" y="0" width="1440" height="900" />
@@ -380,33 +401,23 @@
       <screen x="1440" y="-380" width="1600" height="1000" />
     </state>
     <state x="1788" y="-144" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603300079444" />
-    <state x="514" y="160" width="574" height="740" key="find.popup" timestamp="1603716404461">
+    <state x="514" y="160" width="574" height="740" key="find.popup" timestamp="1603822701430">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="514" y="160" width="574" height="740" key="find.popup/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603675247080" />
-    <state x="514" y="160" width="574" height="740" key="find.popup/-1600.-100.1600.1000/0.0.1440.900@0.0.1440.900" timestamp="1603716404461" />
+    <state x="514" y="160" width="574" height="740" key="find.popup/-1600.-100.1600.1000/0.0.1440.900@0.0.1440.900" timestamp="1603822701430" />
     <state x="2011" y="-202" width="556" height="822" key="find.popup/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603288499516" />
     <state x="2171" y="92" width="586" height="548" key="find.popup/1440.-380.2048.1280/0.0.1440.900@1440.-380.2048.1280" timestamp="1603220235544" />
     <state x="385" y="210" key="run.anything.popup" timestamp="1603636122419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603636122419" />
-    <state x="419" y="166" width="670" height="639" key="search.everywhere.popup" timestamp="1603669252586">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="372" y="148" width="670" height="568" key="search.everywhere.popup" timestamp="1603769298155">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="419" y="166" width="670" height="639" key="search.everywhere.popup/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603669252586" />
+    <state x="372" y="148" width="670" height="568" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1603769298155" />
     <state x="1905" y="-177" width="670" height="692" key="search.everywhere.popup/1440.-357.1600.977/0.23.1440.877@1440.-357.1600.977" timestamp="1603288515818" />
     <state x="1905" y="-196" width="670" height="709" key="search.everywhere.popup/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603305935578" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/controllers/Pusher_server.php</url>
-          <line>70</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

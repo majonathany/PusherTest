@@ -1,0 +1,18 @@
+/* Apply this inside of bootstrap d-flex */
+
+.simple-grid
+{
+    display: grid;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+.simple-grid-cols-3
+{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.simple-grid-rows-2
+{
+    grid-template-rows: 1fr 1fr;
+}

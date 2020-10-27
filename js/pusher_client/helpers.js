@@ -54,3 +54,23 @@ export function getSessionStorageKeyName(projectTemplateVersionId)
 {
     return `projTempVer-${projectTemplateVersionId}-SessionToken`
 }
+
+export function getPrivateChannelName(channelSuffix)
+{
+    return 'private-' + channelSuffix;
+}
+
+export function getPublicChannelName(channelSuffix)
+{
+    return 'public-' + channelSuffix;
+}
+
+export function  getEncryptedChannelName(channelSuffix)
+{
+    return 'private-encrypted-' + channelSuffix;
+}
+
+export function  getPresenceChannelName(channelSuffix)
+{
+    return 'presence-' + channelSuffix;
+}

@@ -24,6 +24,7 @@ class Pusher_Server extends CI_Controller {
         $this->load->helper('url');
         $this->load->library('App_pusher');
         $this->load->model('locked_connections_model');
+
     }
 
     public function produceJSON200Response($results)
@@ -84,8 +85,23 @@ class Pusher_Server extends CI_Controller {
 		$this->load->view('pusher_example');
 	}
 
+    // Returns {auth: "", sharedSecret: ""} for encrypted channels.
 	public function auth()
     {
 
     }
+
+    // Tell server to generate a unique identifier
+    public function login()
+    {
+
+    }
+
+    public function register()
+    {
+
+    }
+
+    //Trigger event to channel.
+    public function receiveMessage(){}
 }

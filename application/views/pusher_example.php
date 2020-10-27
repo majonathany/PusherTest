@@ -4,6 +4,10 @@
     <title>Redux basic example</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/simple.css"></link>
 
     <style>
         a, a:focus, a:hover {
@@ -36,7 +40,7 @@
         }
 
         .cover-container {
-            max-width: 42em;
+            max-width: 50em;
         }
 
         .masthead {
@@ -97,9 +101,9 @@
 <body class="text-center">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column w-100">
-    <header class="masthead mb-auto">
+    <header class="masthead">
         <div class="inner">
-            <h3 class="masthead-brand">Cover</h3>
+            <h3 class="masthead-brand">Pusher Example</h3>
             <nav class="nav nav-masthead justify-content-center">
                 <a class="nav-link active" href="#">Home</a>
                 <a class="nav-link" href="#">Features</a>
@@ -108,14 +112,38 @@
         </div>
     </header>
 
-    <main role="main" class="inner cover">
-        <div class="container d-flex flex-row align-items-center justify-content-center h-100 w-100" >
+    <main role="main" class="inner cover d-flex flex-column">
+        <div class="card container bg-success" style="padding: 1rem;">
+            <div class="card-body simple-grid simple-grid-cols-3 simple-grid-rows-2">
+                <div id="channelDropdown" class="dropdown col">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Channel Type
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" data-value="1" href="#">Public Channel</a>
+                        <a class="dropdown-item" data-value="2" href="#">Private Channel</a>
+                        <a class="dropdown-item" data-value="3" href="#">Presence Channel</a>
+                        <a class="dropdown-item" data-value="4" href="#">Encrypted Channel</a>
 
+                    </div>
+                </div>
+                <input type="text" class="d-block form-control col" id="createChannelName" placeholder="Channel Name">
+                <button class="btn btn-secondary col" id="makeNewChannel">Make New Channel</button>
+
+                <span class="col"> Assume authentication is taken care of.</span>
+                <input type="text" class="d-block form-control col" id="connectToChannelName" placeholder="Go to Channel">
+                <button class="btn btn-secondary col" id="connectToChannel">Connect Channel</button>
+            </div>
+        </div>
+        <div class="container d-flex flex-row align-items-center justify-content-center h-100 w-100 mt-4">
 
             <div id="buttons" class="d-flex flex-column w-50" style="gap: 1rem;">
-                <input class="btn btn-light d-block w-75 text-wrap" id="initializePusher" type="button" value="Initialize Pusher">
+                <input class="btn btn-light d-block w-75 text-wrap" id="initializePusher" type="button"
+                       value="Initialize Pusher">
 
-                <input class="btn btn-warning d-block w-75 text-wrap" id="generateTestEvent" type="button" value="Ping Server and Produce Channel Event">
+                <input class="btn btn-warning d-block w-75 text-wrap" id="generateTestEvent" type="button"
+                       value="Ping Server and Produce Channel Event">
 
                 <input class="btn btn-warning d-block w-75 text-wrap" id="makeEntry" type="button" value="Get Staff Id">
 
@@ -126,7 +154,7 @@
             <div class="card bg-dark d-flex flex-column border border-light ml-1 h-100 w-100" style="width: 30rem;">
                 <h1 class="card-title">Output</h1>
                 <div class="card-body d-flex">
-                    <div>Session Token: <span id="sessionToken"></span> </div>
+                    <div>Session Token: <span id="sessionToken"></span></div>
                     <div id="sessionToken"></div>
                     <ul id="output">
 
@@ -158,7 +186,6 @@
         </div>
 
     </main>
-
     <footer class="mastfoot mt-auto">
         <div class="inner">
             <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
@@ -171,16 +198,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="../../assets/js/vendor/popper.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
+
 <script type="module" src="<?php echo base_url(); ?>dist/bundle.js"></script>
-
-
-<iframe id="nr-ext-rsicon"
-        style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;"></iframe>
 </body>
 </html>

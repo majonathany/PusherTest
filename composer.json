@@ -4,7 +4,9 @@
         "pusher/pusher-php-server": "^4.1",
         "guzzlehttp/psr7": "^1.7",
         "mikey179/vfsstream": "^1.6",
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^8.5",
+        "vlucas/phpdotenv": "^5.2",
+        "delight-im/auth": "^8.2"
     },
     "authors": [
         {
