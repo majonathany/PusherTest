@@ -114,7 +114,12 @@
 
     <main role="main" class="inner cover d-flex flex-column">
         <div class="card container bg-success" style="padding: 1rem;">
+            <div class="card-title">
+                <span class="col"> Assume authentication is taken care of.</span>
+
+            </div>
             <div class="card-body simple-grid simple-grid-cols-3 simple-grid-rows-2">
+
                 <div id="channelDropdown" class="dropdown col">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -131,7 +136,8 @@
                 <input type="text" class="d-block form-control col" id="createChannelName" placeholder="Channel Name">
                 <button class="btn btn-secondary col" id="makeNewChannel">Make New Channel</button>
 
-                <span class="col"> Assume authentication is taken care of.</span>
+                <input type="text" class="d-block form-control col" id="authToken" placeholder="Simulating Auth Token">
+
                 <input type="text" class="d-block form-control col" id="connectToChannelName" placeholder="Go to Channel">
                 <button class="btn btn-secondary col" id="connectToChannel">Connect Channel</button>
             </div>

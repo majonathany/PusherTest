@@ -59,3 +59,5 @@ $route['fetchStaffId'] = 'pusher_server/fetchStaffId';
 $route['fetchProjTempVerId'] = 'pusher_server/fetchProjTempVerId';
 
 $route['pusher/auth'] = 'pusher_server/auth';
+$route['pusher/create'] = 'pusher_server/create';
+$route['pusher/connect'] = 'pusher_server/connect';

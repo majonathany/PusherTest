@@ -60,6 +60,11 @@ class Pusher_Server extends CI_Controller {
             $this->produceJSON400Response(["success" => false]);
     }
 
+    public function getJSONFromRequest()
+    {
+        return json_decode($this->input->raw_input_stream, true);
+    }
+
 
     /**
      * Fetch Staff ID based on current session. Should only be called if user is logged in, otherwise return 400.
@@ -88,18 +93,43 @@ class Pusher_Server extends CI_Controller {
     // Returns {auth: "", sharedSecret: ""} for encrypted channels.
 	public function auth()
     {
-
+        $authToken = $this->input->post('authToken');
+        if ($authToken == 'hello')
+        {
+            return $this->produceJSONFromArray(['authToken']);
+        }
+        else
+        {
+            return $this->produceJSONFromArray('bad token');
+        }
     }
 
     // Tell server to generate a unique identifier
-    public function login()
+    public function create()
     {
-
+        $authToken = $this->getJSONFromRequest()['authToken'];
+        if ($authToken == 'hello')
+        {
+            return $this->produceJSONFromArray(['response' => 'authToken']);
+        }
+        else
+        {
+            return $this->produceJSONFromArray('bad token');
+        }
     }
 
-    public function register()
+    public function connect()
     {
+        $authToken = $this->getJSONFromRequest()['authToken'];
 
+        if ($authToken == 'hello')
+        {
+            return $this->produceJSONFromArray(['response' => 'authToken']);
+        }
+        else
+        {
+            return $this->produceJSONFromArray('bad token');
+        }
     }
 
     //Trigger event to channel.

@@ -41,15 +41,27 @@ function addListeners()
 
 	document.querySelector('#makeNewChannel').addEventListener('click', function() {
 		const channelName = document.querySelector('#createChannelName').value;
-		console.log(channelName);
+		const authToken = document.querySelector('#authToken').value;
 
+		fetch('/pusher/create', { method: "POST",
+			headers: {'Accept': 'application/json',
+				'Content-Type': 'application/json'},
+			body: JSON.stringify({'authToken': 'hello'})})
+			.then(response => response.json().then(json => alert(JSON.stringify(json))));
 
 	})
 
 	document.querySelector('#connectToChannel').addEventListener('click', function() {
 		const channelName = document.querySelector('#connectToChannelName').value;
-		console.log(channelName);
+		const authToken = document.querySelector('#authToken').value;
 
+
+
+		fetch('/pusher/connect', {method: 'POST',
+			headers: {'Accept': 'application/json',
+				'Content-Type': 'application/json'},
+				body: JSON.stringify({authToken: 'hello'})})
+			.then(response => response.json().then(json => alert(JSON.stringify(json))));
 
 	})
 

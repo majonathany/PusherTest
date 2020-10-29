@@ -13,7 +13,7 @@ import { put, call, take, takeEvery, takeLatest } from 'redux-saga/effects'
 import {action_types, Types} from "./actions";
 import {store} from "./reducers";
 
-export let pusher, channel;
+let pusher, channel;
 
 export function fetchStaffId()
 {
@@ -65,6 +65,8 @@ export function* initPusherClient() {
 
     yield call((channelObj) => {
         channelObj.bind('my-event', function(data) {
+            debugger;
+
             store.dispatch({type: action_types.appendEvent, event: data});
         });
     }, channel);
@@ -76,4 +78,14 @@ export const projectTemplateVersionEditingSaga = [
 
 export function* rootSaga() {
     yield all(projectTemplateVersionEditingSaga)
+}
+
+export function getPusher()
+{
+    return pusher;
+}
+
+export function getChannel()
+{
+    return channel;
 }
