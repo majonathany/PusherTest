@@ -7,7 +7,6 @@
 import {fetchJSONOrGetNull, uuidv4} from "./helpers";
 import * as Actions from "./actions";
 import Pusher from 'pusher-js';
-import "core-js/stable";
 import "regenerator-runtime/runtime";
 import { put, call, take, takeEvery, takeLatest } from 'redux-saga/effects'
 import {action_types, Types} from "./actions";
@@ -65,7 +64,6 @@ export function* initPusherClient() {
 
     yield call((channelObj) => {
         channelObj.bind('my-event', function(data) {
-            debugger;
 
             store.dispatch({type: action_types.appendEvent, event: data});
         });

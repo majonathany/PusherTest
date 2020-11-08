@@ -1,7 +1,6 @@
 import {fetchJSONOrGetNull, getSessionStorageKeyName} from "./helpers";
 import {sagaMiddleware, store} from "./reducers";
 import {initPusherClient} from "./sagas";
-import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 import BSN from "bootstrap.native";

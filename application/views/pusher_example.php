@@ -205,6 +205,6 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 
-<script type="module" src="<?php echo base_url(); ?>dist/bundle.js"></script>
+<script src="<?php echo base_url(); ?>dist/main.js"></script>
 </body>
 </html>

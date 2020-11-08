@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5f09b95c-1d69-43f5-9b90-587b48464eb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Pusher_server.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pusher_server.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pusher_example.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pusher_example.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pusher_client/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pusher_client/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pusher_client/sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pusher_client/sagas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,24 +114,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/application/helpers" />
-      <recent name="$PROJECT_DIR$/system/libraries" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/pusher_client/libs" />
       <recent name="$PROJECT_DIR$/application/views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/application/helpers" />
+      <recent name="$PROJECT_DIR$/system/libraries" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="npm.produce">
@@ -439,24 +443,26 @@
       <screen x="1440" y="-380" width="1600" height="1000" />
     </state>
     <state x="1788" y="-144" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603300079444" />
-    <state x="457" y="25" width="574" height="775" key="find.popup" timestamp="1603972432938">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="1999" y="-1412" width="718" height="872" key="find.popup" timestamp="1604824300569">
+      <screen x="1428" y="-1440" width="1600" height="900" />
     </state>
     <state x="339" y="-697" width="556" height="697" key="find.popup/-118.-720.1280.720/0.0.1440.900@-118.-720.1280.720" timestamp="1603849861142" />
     <state x="514" y="160" width="574" height="740" key="find.popup/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603675247080" />
     <state x="514" y="160" width="574" height="740" key="find.popup/-1600.-100.1600.1000/0.0.1440.900@0.0.1440.900" timestamp="1603822701430" />
     <state x="457" y="25" width="574" height="775" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1603972432938" />
+    <state x="1999" y="-1412" width="718" height="872" key="find.popup/1428.-1440.1600.900/-492.-1080.1920.1080/0.0.1280.800@1428.-1440.1600.900" timestamp="1604824300569" />
     <state x="2011" y="-202" width="556" height="822" key="find.popup/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603288499516" />
     <state x="2171" y="92" width="586" height="548" key="find.popup/1440.-380.2048.1280/0.0.1440.900@1440.-380.2048.1280" timestamp="1603220235544" />
     <state x="385" y="210" key="run.anything.popup" timestamp="1603636122419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603636122419" />
-    <state x="372" y="148" width="670" height="568" key="search.everywhere.popup" timestamp="1603769298155">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="1893" y="-1273" width="838" height="639" key="search.everywhere.popup" timestamp="1604824228203">
+      <screen x="1428" y="-1440" width="1600" height="900" />
     </state>
     <state x="419" y="166" width="670" height="639" key="search.everywhere.popup/-118.-720.1280.720/0.0.1440.900@0.0.1440.900" timestamp="1603669252586" />
     <state x="372" y="148" width="670" height="568" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1603769298155" />
+    <state x="1893" y="-1273" width="838" height="639" key="search.everywhere.popup/1428.-1440.1600.900/-492.-1080.1920.1080/0.0.1280.800@1428.-1440.1600.900" timestamp="1604824228203" />
     <state x="1905" y="-177" width="670" height="692" key="search.everywhere.popup/1440.-357.1600.977/0.23.1440.877@1440.-357.1600.977" timestamp="1603288515818" />
     <state x="1905" y="-196" width="670" height="709" key="search.everywhere.popup/1440.-380.1600.1000/0.0.1440.900@1440.-380.1600.1000" timestamp="1603305935578" />
   </component>
@@ -470,7 +476,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/pusher_client/sagas.js</url>
-          <line>69</line>
+          <line>67</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
