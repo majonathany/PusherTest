@@ -1,0 +1,26 @@
+PHPUnit 8.5.8 by Sebastian Bergmann and contributors.
+
+F                                                                   1 / 1 (100%)1085843
+
+Time: 124 ms, Memory: 8.00 MB
+
+There was 1 failure:
+
+1) Pusher_test::test_auth_string
+try
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'82b7e137398bcd5d23f9665296b1248bbabc0f58a9d6aeca60f611292ef0baf8'
++'4547cb6dd05730d58269058206133e80a94f212fbf33f52db372bd84c4ebd6c0'
+
+/Users/professional/Desktop/side-15inch/pusher_test/application/tests/Pusher_test.php:62
+/Users/professional/Desktop/side-15inch/pusher_test/vendor/phpunit/phpunit/phpunit:61
+
+FAILURES!
+Tests: 1, Assertions: 5, Failures: 1.
+
+Generating code coverage report in Clover XML format ... done [57 ms]
+
+Generating code coverage report in HTML format ... done [51 ms]

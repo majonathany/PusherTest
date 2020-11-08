@@ -6,13 +6,16 @@
         "mikey179/vfsstream": "^1.6",
         "phpunit/phpunit": "^8.5",
         "vlucas/phpdotenv": "^5.2",
-        "delight-im/auth": "^8.2"
+        "delight-im/auth": "^8.2",
+        "ext-json": "^7.4"
     },
     "authors": [
         {
             "name": "Jonathan Ma",
             "email": "majonathant@gmail.com"
         }
-    ]
-
+    ],
+    "require-dev": {
+        "kenjis/ci-phpunit-test": "^0.18.0"
+    }
 }

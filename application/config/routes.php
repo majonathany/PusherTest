@@ -57,6 +57,7 @@ $route['sendMessage'] = 'pusher_server/sendMessage';
 $route['generateTestEvent'] = 'pusher_server/generateTestEvent';
 $route['fetchStaffId'] = 'pusher_server/fetchStaffId';
 $route['fetchProjTempVerId'] = 'pusher_server/fetchProjTempVerId';
+$route['fetchAppKey'] = 'pusher_server/fetchAppKey';
 
 $route['pusher/auth'] = 'pusher_server/auth';
 $route['pusher/create'] = 'pusher_server/create';

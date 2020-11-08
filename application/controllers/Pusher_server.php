@@ -47,6 +47,10 @@ class Pusher_Server extends CI_Controller {
     //produces response based on that.
     public function produceJSONFromArray($results)
     {
+        if (!is_array($results) && !is_null($results))
+        {
+            $results = [$results];
+        }
         return $results != null ?
             $this->produceJSON200Response($results) :
             $this->produceJSON400Response('');
@@ -54,8 +58,13 @@ class Pusher_Server extends CI_Controller {
 
     public function generateTestEvent()
     {
+        $request = json_decode($this->input->raw_input_stream, true);
+
+        $channel = $request["channel"];
+        $event = $request["event"];
+
         $data['message'] = rand(1, 1000);
-        $response = $this->app_pusher->trigger('my-channel', 'my-event', $data);
+        $response = $this->app_pusher->trigger($channel, $event, $data);
         return $response ? $this->produceJSON200Response(["success" => true]) :
             $this->produceJSON400Response(["success" => false]);
     }
@@ -71,6 +80,13 @@ class Pusher_Server extends CI_Controller {
      *
      * @return \PHPUnit\Util\Json with form: {staff_id: n}
      */
+
+    public function fetchAppKey()
+    {
+        return $this->produceJSONFromArray(
+            [$this->app_pusher->getAppKey()]
+        );
+    }
 
     public function fetchStaffId()
     {
@@ -94,9 +110,14 @@ class Pusher_Server extends CI_Controller {
 	public function auth()
     {
         $authToken = $this->input->post('authToken');
-        if ($authToken == 'hello')
+        $socketId = $this->input->post('socket_id');
+        $channelName = $this->input->post('channel_name');
+
+//        if ($authToken == 'correct')
+        if (true)
         {
-            return $this->produceJSONFromArray(['authToken']);
+            $authObject = $this->getAuthJSON($authToken, $socketId, $channelName);
+            return $this->produceJSONFromArray($authObject);
         }
         else
         {
@@ -104,13 +125,24 @@ class Pusher_Server extends CI_Controller {
         }
     }
 
+    public function getAuthJSON(string $authToken, string $socketId, string $channelName)
+    {
+        $key = $this->app_pusher->getAppKey();
+        $secret = $this->app_pusher->getAppSecret();
+
+        return $this->app_pusher->socket_auth(
+            $channelName, $socketId, "{\"authToken\": \"$authToken\" }"
+        );
+    }
+
     // Tell server to generate a unique identifier
     public function create()
     {
         $authToken = $this->getJSONFromRequest()['authToken'];
-        if ($authToken == 'hello')
+        $channelName = $this->getJSONFromRequest()['channelName'];
+        if ($authToken == 'correct')
         {
-            return $this->produceJSONFromArray(['response' => 'authToken']);
+            return $this->produceJSONFromArray(['response' => $authToken.$channelName]);
         }
         else
         {
@@ -121,10 +153,11 @@ class Pusher_Server extends CI_Controller {
     public function connect()
     {
         $authToken = $this->getJSONFromRequest()['authToken'];
+        $channelName = $this->getJSONFromRequest()['channelName'];
 
-        if ($authToken == 'hello')
+        if ($authToken == 'correct')
         {
-            return $this->produceJSONFromArray(['response' => 'authToken']);
+            return $this->produceJSONFromArray(['response' => $authToken.$channelName]);
         }
         else
         {

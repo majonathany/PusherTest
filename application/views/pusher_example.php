@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redux basic example</title>
+    <title>Pusher Instant Communication Example</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -92,10 +92,6 @@
             font-weight: 700;
         }
 
-        .mastfoot {
-            color: rgba(255, 255, 255, .5);
-        }
-
     </style>
 </head>
 <body class="text-center">
@@ -121,6 +117,7 @@
             <div class="card-body simple-grid simple-grid-cols-3 simple-grid-rows-2">
 
                 <div id="channelDropdown" class="dropdown col">
+                    <!-- This button will have a data-value attribute when a choice is selected. -->
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Channel Type
@@ -133,13 +130,13 @@
 
                     </div>
                 </div>
-                <input type="text" class="d-block form-control col" id="createChannelName" placeholder="Channel Name">
-                <button class="btn btn-secondary col" id="makeNewChannel">Make New Channel</button>
+                <input type="text" class="d-block form-control col" id="makeChannelInput" placeholder="Channel Name">
+                <button class="btn btn-secondary col" id="makeChannelInputButton">Make New Channel</button>
 
                 <input type="text" class="d-block form-control col" id="authToken" placeholder="Simulating Auth Token">
 
-                <input type="text" class="d-block form-control col" id="connectToChannelName" placeholder="Go to Channel">
-                <button class="btn btn-secondary col" id="connectToChannel">Connect Channel</button>
+                <input type="text" class="d-block form-control col" id="connectChannelInput" placeholder="Go to Channel">
+                <button class="btn btn-secondary col" id="connectChannelInputButton">Connect To Channel</button>
             </div>
         </div>
         <div class="container d-flex flex-row align-items-center justify-content-center h-100 w-100 mt-4">
@@ -151,7 +148,7 @@
                 <input class="btn btn-warning d-block w-75 text-wrap" id="generateTestEvent" type="button"
                        value="Ping Server and Produce Channel Event">
 
-                <input class="btn btn-warning d-block w-75 text-wrap" id="makeEntry" type="button" value="Get Staff Id">
+                <input class="btn btn-warning d-block w-75 text-wrap" id="getStaffId" type="button" value="Simulate Use Project">
 
                 <input class="btn btn-danger d-block w-75 text-wrap" id="kickMeOut" type="button" data-toggle="modal"
                        data-target="#sPromptsCToQuitModal" value="Kick Me Out">
@@ -160,11 +157,13 @@
             <div class="card bg-dark d-flex flex-column border border-light ml-1 h-100 w-100" style="width: 30rem;">
                 <h1 class="card-title">Output</h1>
                 <div class="card-body d-flex">
-                    <div>Session Token: <span id="sessionToken"></span></div>
-                    <div id="sessionToken"></div>
-                    <ul id="output">
-
-                    </ul>
+                    <div class="col-3">Session Token: <span id="sessionToken"></span></div>
+                    <div class="col-9">
+                        <span> Actions </span>
+                        <ul class="col-9" id="output">
+                            <li> Examples go here</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -192,12 +191,6 @@
         </div>
 
     </main>
-    <footer class="mastfoot mt-auto">
-        <div class="inner">
-            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
-                        href="https://twitter.com/mdo">@mdo</a>.</p>
-        </div>
-    </footer>
 </div>
 
 

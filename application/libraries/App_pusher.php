@@ -28,6 +28,21 @@ class App_pusher
         $this->initialize();
     }
 
+    public function getAppKey()
+    {
+        return $this->CI->config->item('pusher_app_key');
+    }
+
+    public function getAppSecret()
+    {
+        return $this->CI->config->item('pusher_app_secret');
+    }
+
+    public function getAppId()
+    {
+        return $this->CI->config->item('pusher_app_id');
+    }
+
     private function initialize()
     {
         try

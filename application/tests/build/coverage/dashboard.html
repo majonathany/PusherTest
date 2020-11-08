@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/professional/Desktop/side-15inch/pusher_test/application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/Users/professional/Desktop/side-15inch/pusher_test/application</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/Pusher_server.php.html#7">Pusher_Server</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#6">Locked_connections_model</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#5">App_pusher</a></td><td class="text-right">60%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/Pusher_server.php.html#7">Pusher_Server</a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#6">Locked_connections_model</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#5">App_pusher</a></td><td class="text-right">21</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/Pusher_server.php.html#14"><abbr title="Pusher_Server::db_prefix">db_prefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#133"><abbr title="Pusher_Server::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#39"><abbr title="Locked_connections_model::kickout">kickout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#28"><abbr title="Locked_connections_model::fetchProjTempVerId">fetchProjTempVerId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#19"><abbr title="Locked_connections_model::fetchStaffId">fetchStaffId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#8"><abbr title="Locked_connections_model::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#65"><abbr title="App_pusher::__call">__call</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#41"><abbr title="App_pusher::getAppId">getAppId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#36"><abbr title="App_pusher::getAppSecret">getAppSecret</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#31"><abbr title="App_pusher::getAppKey">getAppKey</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#147"><abbr title="Pusher_Server::connect">connect</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#122"><abbr title="Pusher_Server::getAuthJSON">getAuthJSON</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#19"><abbr title="Pusher_Server::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#105"><abbr title="Pusher_Server::auth">auth</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#99"><abbr title="Pusher_Server::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#92"><abbr title="Pusher_Server::fetchProjTempVerId">fetchProjTempVerId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#86"><abbr title="Pusher_Server::fetchStaffId">fetchStaffId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#79"><abbr title="Pusher_Server::fetchAppKey">fetchAppKey</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#67"><abbr title="Pusher_Server::getJSONFromRequest">getJSONFromRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#59"><abbr title="Pusher_Server::generateTestEvent">generateTestEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#48"><abbr title="Pusher_Server::produceJSONFromArray">produceJSONFromArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#38"><abbr title="Pusher_Server::produceJSON400Response">produceJSON400Response</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#30"><abbr title="Pusher_Server::produceJSON200Response">produceJSON200Response</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#65"><abbr title="Locked_connections_model::get_connection_status">get_connection_status</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#46"><abbr title="App_pusher::initialize">initialize</abbr></a></td><td class="text-right">77%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controllers/Pusher_server.php.html#48"><abbr title="Pusher_Server::produceJSONFromArray">produceJSONFromArray</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#65"><abbr title="App_pusher::__call">__call</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#38"><abbr title="Pusher_Server::produceJSON400Response">produceJSON400Response</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#59"><abbr title="Pusher_Server::generateTestEvent">generateTestEvent</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#105"><abbr title="Pusher_Server::auth">auth</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#133"><abbr title="Pusher_Server::create">create</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controllers/Pusher_server.php.html#147"><abbr title="Pusher_Server::connect">connect</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/Locked_connections_model.php.html#39"><abbr title="Locked_connections_model::kickout">kickout</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="libraries/App_pusher.php.html#46"><abbr title="App_pusher::initialize">initialize</abbr></a></td><td class="text-right">5</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.10</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.11</a> with <a href="https://xdebug.org/">Xdebug 2.9.8</a> and <a href="https://phpunit.de/">PHPUnit 8.5.8</a> at Tue Nov 3 12:15:21 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,1,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([24,0,0,0,0,0,0,0,1,0,0,2], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,24,"<a href=\"controllers\/Pusher_server.php.html#7\">Pusher_Server<\/a>"],[60,12,"<a href=\"libraries\/App_pusher.php.html#5\">App_pusher<\/a>"],[0,6,"<a href=\"models\/Locked_connections_model.php.html#6\">Locked_connections_model<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"controllers\/Pusher_server.php.html#14\">Pusher_Server::db_prefix<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#19\">Pusher_Server::__construct<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#30\">Pusher_Server::produceJSON200Response<\/a>"],[0,2,"<a href=\"controllers\/Pusher_server.php.html#38\">Pusher_Server::produceJSON400Response<\/a>"],[0,4,"<a href=\"controllers\/Pusher_server.php.html#48\">Pusher_Server::produceJSONFromArray<\/a>"],[0,2,"<a href=\"controllers\/Pusher_server.php.html#59\">Pusher_Server::generateTestEvent<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#67\">Pusher_Server::getJSONFromRequest<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#79\">Pusher_Server::fetchAppKey<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#86\">Pusher_Server::fetchStaffId<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#92\">Pusher_Server::fetchProjTempVerId<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#99\">Pusher_Server::index<\/a>"],[0,2,"<a href=\"controllers\/Pusher_server.php.html#105\">Pusher_Server::auth<\/a>"],[0,1,"<a href=\"controllers\/Pusher_server.php.html#122\">Pusher_Server::getAuthJSON<\/a>"],[0,2,"<a href=\"controllers\/Pusher_server.php.html#133\">Pusher_Server::create<\/a>"],[0,2,"<a href=\"controllers\/Pusher_server.php.html#147\">Pusher_Server::connect<\/a>"],[100,1,"<a href=\"controllers\/Pusher_server.php.html#163\">Pusher_Server::receiveMessage<\/a>"],[100,1,"<a href=\"libraries\/App_pusher.php.html#17\">App_pusher::__construct<\/a>"],[0,1,"<a href=\"libraries\/App_pusher.php.html#31\">App_pusher::getAppKey<\/a>"],[0,1,"<a href=\"libraries\/App_pusher.php.html#36\">App_pusher::getAppSecret<\/a>"],[0,1,"<a href=\"libraries\/App_pusher.php.html#41\">App_pusher::getAppId<\/a>"],[77.77777777777779,5,"<a href=\"libraries\/App_pusher.php.html#46\">App_pusher::initialize<\/a>"],[0,3,"<a href=\"libraries\/App_pusher.php.html#65\">App_pusher::__call<\/a>"],[0,1,"<a href=\"models\/Locked_connections_model.php.html#8\">Locked_connections_model::__construct<\/a>"],[0,1,"<a href=\"models\/Locked_connections_model.php.html#19\">Locked_connections_model::fetchStaffId<\/a>"],[0,1,"<a href=\"models\/Locked_connections_model.php.html#28\">Locked_connections_model::fetchProjTempVerId<\/a>"],[0,2,"<a href=\"models\/Locked_connections_model.php.html#39\">Locked_connections_model::kickout<\/a>"],[0,1,"<a href=\"models\/Locked_connections_model.php.html#65\">Locked_connections_model::get_connection_status<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

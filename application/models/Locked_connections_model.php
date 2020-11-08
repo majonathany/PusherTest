@@ -28,29 +28,11 @@ class Locked_connections_model extends CI_Model
     public function fetchProjTempVerId()
     {
         $this->db->from(db_prefix() . "project_template_versions");
-        $this->db->select('*');
+        $this->db->select('id');
         $this->db->limit(1);
         $query = $this->db->get();
         return ['id' => $query->result()[0]];
 
-    }
-
-    public function testDB()
-    {
-        $this->db->trans_start();
-        $this->db->flush_cache();
-        $this->db->from(db_prefix() . "staff");
-        $this->db->select('*');
-        $query = $this->db->get();
-
-        if ($this->db->trans_complete())
-        {
-            return $query->result;
-        }
-        else
-        {
-            return null;
-        }
     }
 
     //TODO
