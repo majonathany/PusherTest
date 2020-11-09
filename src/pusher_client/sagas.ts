@@ -4,18 +4,19 @@
 // Take a break until an action has been received by the store, capture and return that action object.
 // Select a function that take a store and returns a slice, and call it on the current store.
 
-import {fetchJSONOrGetNull, isNumeric, PusherStates, uuidv4} from "./helpers";
+import {requestJSON, isNumeric, PusherStates, uuidv4} from "./helpers";
 import * as Actions from "./actions";
 import Pusher, {AuthOptions} from 'pusher-js';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import {put, call, take, takeEvery, takeLatest} from 'redux-saga/effects'
+import {put, call, take, takeEvery, takeLatest} from 'redux-saga/effects';
 import {action_creators, action_types} from "./actions";
 import {store} from "./reducers";
 import {getChannelName, getSessionStorageKeyName} from "./helpers"
-import {getConnectionObject} from "./main";
+import {getConnectionObject} from "../main";
 
-let pusher = null, channel = null;
+let pusher: Pusher.Pusher = null;
+let channel: Pusher.Channel = null;
 
 const example_values = {
     projTempVerId: "5",
@@ -23,20 +24,20 @@ const example_values = {
 }
 
 export function fetchStaffId() {
-    return fetchJSONOrGetNull('/fetchStaffId').then((response) => {
+    return requestJSON('/fetchStaffId').then((response) => {
         return isNumeric(response) && response || example_values.staffId;
     }).catch(e => -1)
 }
 
 export function fetchProjTempVerId() {
-    return fetchJSONOrGetNull('/fetchProjTempVerId').then((response) => {
+    return requestJSON('/fetchProjTempVerId').then((response) => {
         return isNumeric(response) && response || example_values.projTempVerId;
     }).catch(e => -1)
 }
 
 export function fetchAppKey()
 {
-    return fetchJSONOrGetNull('/fetchAppKey').then(response => {
+    return requestJSON('/fetchAppKey').then(response => {
         return response[0];
     }).catch(e => -1)
 }

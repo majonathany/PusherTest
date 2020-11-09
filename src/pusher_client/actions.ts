@@ -29,7 +29,7 @@ export enum action_types {
 
 // Describes the anatomy of the actions/events that need to be processed by the reducers
 export const action_creators = {
-	setPusherState: pusher_state:  => ({type: action_types.setPusherState, payload: {pusher_state: pusher_state}}),
+	setPusherState: pusher_state  => ({type: action_types.setPusherState, payload: {pusher_state: pusher_state}}),
 	setAuthToken: token => ({type: action_types.setAuthToken, payload: {authToken: token}}),
 	appendEvent: event => ({type: action_types.appendEvent, payload: {event: event}}),
 	setMakeChannelInput: input => ({type: action_types.setMakeChannelInput, payload: {makeChannelInput: input}}),

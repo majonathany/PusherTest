@@ -1,29 +1,13 @@
 import {ChannelTypePrefix, getSessionStorageKeyName, uuidv4} from "./helpers";
 import {action_types} from './actions';
-import {applyMiddleware, combineReducers, createStore} from 'redux'
-import createSagaMiddleware from 'redux-saga'
+import {applyMiddleware, combineReducers, createStore} from 'redux';
+import createSagaMiddleware from "redux-saga";
 import devToolsEnhancer, {composeWithDevTools} from 'remote-redux-devtools';
 
 // initialProjectTemplateVersionClientState
 // This is the state for the current user. There is a difference between the current project the user
 // is editing, and his open sessions.
 
-interface PusherClientState {
-    channelTypeInput: ChannelTypePrefix
-    currentProjectVersionId: -1,
-    authToken: "",
-    appKey: "",
-    staffId: "",
-    makeChannelInput: "",
-    connectChannelInput: "",
-    sessions: [{
-        projTempVerId: -1,
-        sessionStorageToken: -1,
-        canEdit: false,
-        isEditing: false,
-        eventLog: []
-    }]
-}
 
 const initState = {
     channelTypeInput: ChannelTypePrefix.PUBLIC,

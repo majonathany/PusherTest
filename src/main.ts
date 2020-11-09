@@ -1,34 +1,28 @@
-import {
-    fetchJSONOrGetNull,
-    getSessionStorageKeyName,
-    ChannelTypePrefix,
-    getChannelName,
-    getChannelTypePrefix
-} from "./pusher_client/helpers";
-import {sagaMiddleware, store} from "./pusher_client/reducers";
-import {connectToChannel, initPusherClient} from "./pusher_client/sagas";
+import {getSessionStorageKeyName, requestJSON} from "~pusher_client/helpers";
+import {sagaMiddleware, store} from "~pusher_client/reducers";
+import {connectToChannel, initPusherClient} from "~pusher_client/sagas";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import {action_creators} from "./pusher_client/actions";
+import {action_creators} from "~pusher_client/actions";
 
-import BSN from "bootstrap.native";
+// import BSN from "bootstrap.native";
 
 //Initialize DOM
-function addListeners() {
+function addListeners(): void {
 
     //Add OnBlur to Text Box
-    document.querySelector("#authToken").addEventListener('blur', function() {
-        const token = document.querySelector("#authToken").value;
+    document.querySelector("#authToken").addEventListener('blur', function () {
+        const token: string = document.querySelector("#authToken").value;
         store.dispatch(action_creators.setAuthToken(token))
     });
 
-    document.querySelector("#makeChannelInput").addEventListener('blur', function() {
-        const input = document.querySelector("#makeChannelInput").value;
+    document.querySelector("#makeChannelInput").addEventListener('blur', function () {
+        const input: string = document.querySelector("#makeChannelInput").value;
         store.dispatch(action_creators.setMakeChannelInput(input))
     });
 
-    document.querySelector("#connectChannelInput").addEventListener('blur', function() {
-        const input = document.querySelector("#connectChannelInput").value;
+    document.querySelector("#connectChannelInput").addEventListener('blur', function () {
+        const input: string = document.querySelector("#connectChannelInput").value;
         store.dispatch(action_creators.setConnectChannelInput(input))
     });
 
@@ -41,10 +35,9 @@ function addListeners() {
     })
 
     //Send a message
-    document.querySelector('#generateTestEvent').addEventListener('click', function () {
+    document.querySelector('#generateTestEvent').addEventListener('click', function (): void {
         const channelForMessage = getConnectionObject().connectChannelInput;
-        fetchJSONOrGetNull('/generateTestEvent', {}, true,
-            JSON.stringify({"channel": channelForMessage, "event": "event"}), true).then((response) => {
+        requestJSON('/generateTestEvent', {}, JSON.stringify({"channel": channelForMessage, "event": "event"}), true).then((response) => {
             console.info("Sent Message successfully")
         }).catch(function (e) {
             console.error("Did not send message successfully");
@@ -52,28 +45,32 @@ function addListeners() {
     })
 
     //Get Staff Id
-    document.querySelector('#getStaffId').addEventListener('click', function (response) {
-        fetchJSONOrGetNull('/fetchStaffId').then(function (response) {
+    document.querySelector('#getStaffId').addEventListener('click', function (event): void {
+        requestJSON('/fetchStaffId').then(function (response: number) {
 
-            store.dispatch(action_creators.fetchStaffId(response["staffid"]))
+            store.dispatch(action_creators.fetchStaffId(response))
             console.info("Successfully communicated with database")
-        }).catch(function (e) {
+        }).catch(function (e: Error) {
             console.debug("Did not successfully communicate with database")
         })
     })
 
-    document.querySelectorAll('#channelDropdown a').forEach(function (selector) {
-        selector.addEventListener('click', function (event) {
-            const choice = event.currentTarget.dataset.value;
-            const text = event.currentTarget.textContent;
+    document.querySelectorAll('#channelDropdown a').forEach(function (selector: HTMLElement) {
+        selector.addEventListener('click', function (event: any) {
 
-            document.querySelector('#dropdownMenuButton').textContent = text;
+            document.querySelector('#dropdownMenuButton').textContent = event.currentTarget.textContent;
 
             // Public - 1, Private - 2, Presence - 3, Encrypted - 4
-            document.querySelector('#dropdownMenuButton').dataset.value = choice;
 
-            const input = getChannelTypePrefix(choice);
+            if (document.querySelector('#dropdownMenuButton') instanceof HTMLElement)
+            {
+                const select = document.querySelector('#dropdownMenuButton') as HTMLElement;
+                select.dataset.value = event.currentTarget.dataset.value;
+            }
+
+            const input: string = getChannelTypePrefix(choice);
             store.dispatch(action_creators.setChannelTypeInput(input));
+
 
         })
     })
@@ -96,8 +93,7 @@ function addListeners() {
     document.querySelector('#connectChannelInputButton').addEventListener('click', function () {
         const connectionObject = getConnectionObject();
 
-        if (getConnectionObject().connectChannelInput != null )
-        {
+        if (getConnectionObject().connectChannelInput != null) {
             if (confirm("LoadedPusher. Connect to channel: " + getConnectionObject().connectChannelInput + "?")) {
                 sagaMiddleware.run(connectToChannel);
             }
